@@ -1,3 +1,8 @@
 "use client"
-import PxlGrowSite from "./PxlGrowSite"
-export default function Home(){return <PxlGrowSite/>}
+import dynamic from 'next/dynamic'
+
+const PxlGrowSite = dynamic(() => import('./PxlGrowSite'), { ssr: false })
+
+export default function Home() {
+  return <PxlGrowSite />
+}
