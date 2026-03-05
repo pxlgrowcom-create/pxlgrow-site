@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-text{background:linear-gradient(135deg,#06b6d4 0%,#3b82f6 50%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.glass{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08)}
+.glass-strong{background:rgba(255,255,255,0.07);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.12)}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.animate-slide-up{animation:slideUp .6s ease-out forwards}
+.animate-marquee{animation:marquee 40s linear infinite}
+.stagger-1{animation-delay:.1s}.stagger-2{animation-delay:.2s}.stagger-3{animation-delay:.3s}.stagger-4{animation-delay:.4s}
+.btn-primary{background:linear-gradient(135deg,#06b6d4,#3b82f6);transition:all .3s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(6,182,212,.4)}
+.service-tab{transition:all .3s;position:relative}
+.service-tab::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6);transition:width .3s}
+.service-tab.active::after{width:100%}.service-tab.active{color:#06b6d4}
+.case-card{transition:all .5s cubic-bezier(.4,0,.2,1)}.case-card:hover{transform:translateY(-4px)}
+.img-cover{object-fit:cover;width:100%;height:100%}
+.breakdown-tooltip{opacity:0;transform:translateY(10px);transition:all .3s;pointer-events:none}
+.breakdown-tooltip.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.metric-pill{background:linear-gradient(135deg,rgba(6,182,212,.15),rgba(59,130,246,.1));border:1px solid rgba(6,182,212,.25)}
+.swipe-container{position:relative;overflow:hidden;touch-action:pan-y}
+.swipe-track{display:flex;will-change:transform}
+.swipe-slide{min-width:100%;flex-shrink:0}
+.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
